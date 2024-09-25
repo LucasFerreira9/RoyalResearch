@@ -1,0 +1,12 @@
+{{#each works}}
+<div class="work" citations={{this.cited_by_count}} name={{this.display_name}}>
+    <div class="card work-card">
+        <div>{{this.display_name}}</div>
+        <div class="year">{{this.publication_year}}</div>
+    </div>
+    <div class="graph-card">
+        <div class="graph-rect"></div>
+        {{this.cited_by_count}}
+    </div>
+</div>
+{{/each}}

@@ -1,0 +1,17 @@
+{{#each topics}}
+<div class="work" citations={{this.count}} name={{this.display_name}}>
+    <div class="card work-card">
+        <div>{{this.display_name}}</div>
+        <div>
+            <p class="gray-text">domínio:</p> {{this.domain.display_name}}
+        </div>
+        <div>
+             <p class="gray-text">subcampo:</p> {{this.subfield.display_name}}
+        </div>
+    </div>
+    <div class="graph-card">
+        <div class="graph-rect"></div>
+        {{this.count}}
+    </div>
+</div>
+{{/each}}

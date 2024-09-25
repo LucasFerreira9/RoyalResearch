@@ -1,0 +1,124 @@
+main{
+    height: 100vh;
+    padding-top: 10vh; 
+    justify-content: start;       
+}
+
+#title-container{
+    width: var(--main-width);
+}
+
+#title-container h1{ 
+    font-size: 2em; 
+}
+
+#title-container a{
+    font-size: 0.8em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+main h1 p{
+    color:var(--purple-color);
+    font-family: 'Poppins Bold',Arial, Helvetica, sans-serif;
+}
+
+#search-container {
+    display: flex;
+    width: var(--main-width);
+    align-items: center;
+    margin-top: calc(var(--header-size)/2);
+    padding: 0.5vw;
+    border-radius: 20px;
+    
+    background-color: #F6F6F6;
+
+    transition: transform 0.3s ease;    
+}
+
+#search-container:hover{
+    transform: scale(1.03);
+}
+
+#search-input {
+    background-color: transparent;
+    margin-left: 0.3vh;
+    outline: none;
+    color: var(--window-color);       
+}
+
+#search-input::placeholder{
+    color: rgba(0,0,0,0.25);
+}
+
+#search-input::-webkit-search-cancel-button, #search-results-container::-webkit-scrollbar{
+    display: none;
+}
+
+#search-results-container{
+    margin-top: 1%;
+
+    width: var(--main-width);
+    max-height: 30vh;
+    text-align: center;
+    background-color: var(--window-color);
+    
+    overflow: scroll;
+    border-radius: 20px;
+}
+
+.result-card{
+    width: 100%;
+    display: flex;
+    border-radius: 20px;
+    margin: 1%;
+    cursor: pointer;
+    text-align: left;
+}
+
+.icon {
+    width: 2em;
+    height: auto;
+    margin-right: 1%;
+}
+
+.author-name {
+    color: var(--purple) ; 
+}
+
+.institution-name,#empty-result {
+    font-size: .65em;
+    color: var(--gray-text);
+}
+
+@media only screen and (max-width: 1200px) {
+    #section-title-container h1{ 
+        font-size: 1.7em; 
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #section-title-container h1{ 
+        font-size: 1.4em; 
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #section-title-container h1{ 
+        font-size: 1.2em; 
+    }
+    #search-results-container{
+        max-height: 20vh;
+    }
+   
+}
+
+@media only screen and (max-width: 470px){
+    #section-title-container h1{ 
+        font-size: 1em; 
+    }
+    #section-title-container a{
+        font-size: 0.7em;
+    }
+}
+

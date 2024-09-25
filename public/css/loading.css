@@ -1,0 +1,38 @@
+@keyframes loading {
+    0%{
+        font-size: 2em;
+    }
+    50%{
+        font-size: 2.3em;
+    }
+    100%{
+        font-size: 2em;
+    }
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body div{
+    max-height: 5%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 2em;
+    animation-name: loading;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    color: white;
+}

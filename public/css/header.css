@@ -1,0 +1,59 @@
+header { 
+    height: var(--header-size);
+    width: 100vw;
+    background-color: var(--purple-color);
+ 
+    font-family: "Grenze Gotisch", Arial, Helvetica, sans-serif;
+    color: white;
+
+    font-size: 2.2em;
+}
+
+#header-title{
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 1.8em;
+    height: auto;
+}
+
+.custom-shape-divider-top-1714530376 {
+    position: absolute;
+    top: var(--header-size);
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1714530376 svg {
+    position: relative;
+    display: block;
+    width: 100vw;
+    height: var(--header-size);;
+}
+
+.custom-shape-divider-top-1714530376 .shape-fill {
+    fill: #7851A9;
+}
+
+@media only screen and (max-width: 800px) {
+    header{
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    header{
+        font-size: 1.8em;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    header{
+        font-size: 1.6em;
+    }
+}
+

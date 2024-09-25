@@ -1,0 +1,87 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações Pesquisador</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dropdown.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/author_page.css">
+
+    <script src="../components/waves.js" defer></script>
+    <script src="../js/author_page/main.js" type="module" defer></script>
+</head>
+
+<body>
+    <nav id='lateral-menu' class="hidden-menu">
+        <div id="logo-container" class="row-centered">
+            <img src="../assets/icons/logo.svg">
+            <strong>Royal Research</strong>
+            <img id="close-btn" class="clickable" src="../assets/icons/close.svg">
+        </div>
+
+        <div class="nav-item clickable row-centered selected" section_id="works-section">
+            <img src="../assets/icons/works.svg">
+            <a>Trabalhos</a>
+        </div>
+        <div class="nav-item clickable row-centered" section_id="institutes-section">
+            <img src="../assets/icons/institutes.svg">
+            <a>Instituições</a>
+        </div>
+        <div class="nav-item clickable row-centered" section_id="topics-section">
+            <img src="../assets/icons/topics.svg">
+            <a>Tópicos</a>
+        </div>
+    </nav>
+    <header>
+        <img id="open-btn" class="clickable" src="../assets/icons/menu.svg">
+        <waves-component></waves-component>
+    </header>
+    <main>
+        <div id="profile-container">
+            <div>
+                <img src={{author_image_url}}>
+            </div>
+            <h1>{{author_name}}</h1>
+        </div>
+        <div id="cards-container">
+            <div id="total-works" class="card hidden-card">
+                <p class="gray-text">Trabalhos publicados</p>
+                {{works_number}}
+            </div>
+            <div id="institute" class="card hidden-card">
+                <p class="gray-text">instituição</p>
+                {{current_institution}}
+            </div>
+            <div id="total-citations" class="card hidden-card">
+                <p class="gray-text">total de citações</p>
+                {{cited_number}}
+            </div>
+        </div>
+
+        <div id="works-section" class="section hidden" max-citations={{max_work_citations}}>
+            <h1>TRABALHOS</h1>
+            <div class="content">
+                <div class="options-container">
+
+                </div>
+                {{>works works=works}}
+            </div>
+        </div>
+
+        <div id="institutes-section" class="section hidden">
+            <h1>INSTITUIÇÕES</h1>
+            <div class="content">
+                {{>institutes institutes=institutes}}
+            </div>
+        </div>
+
+        <div id="topics-section" class="section hidden" max-citations={{max_topics_citations}}>
+            <h1>TÓPICOS</h1>
+            <div class="content">
+                <div class="options-container"></div>
+                {{>topics topics=topics}}
+            </div>
+        </div>
+    </main>
+</body>

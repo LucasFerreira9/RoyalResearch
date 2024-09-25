@@ -1,0 +1,136 @@
+:root{
+    --purple-color: #7851A9;
+    --background-color: #121212;
+    --window-color: #282828;
+    --card-color: #424242;
+    --gray: #909090;
+
+    --header-size: 90px;
+
+    --main-width: 800px;
+    --default-padding: 5px;
+
+    font-size: 16px;
+    background-color: var(--background-color);   
+    font-family: "Poppins Regular", Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+main {
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
+    justify-content: center;
+    
+}
+
+.gray-text{
+    color: var(--gray);
+    display: inline;
+}
+
+.clickable{
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.clickable:hover{
+    transform: scale(1.05);
+}
+
+.selectable:hover{
+    background-color: var(--gray);
+    cursor: pointer;
+}
+
+.hidden{
+    opacity: 0;
+    display: none;
+    transform: translateY(10%);
+}
+
+
+@font-face {
+    font-family: "Grenze Gotisch";
+    src: url('/fonts/Grenze_Gotisch/static/GrenzeGotisch-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Poppins Regular";
+    src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: "Poppins Bold";
+    src: url('/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+
+
+@media only screen and (max-width: 1000px) {
+    :root{
+        --main-width: 600px;
+
+        --default-padding: 6px;
+        --default-border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    :root{
+        --main-width: 500px;
+    }
+}
+
+@media only screen and (max-width: 550px){
+    :root{
+        --main-width: 400px;
+        --header-size: 80px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    :root{
+        --main-width: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

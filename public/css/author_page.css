@@ -1,0 +1,340 @@
+body{
+    --top: calc(-0.5 * var(--header-size));
+    --section-width: 80%
+}
+
+header{
+    position: fixed;
+}
+
+#close-btn{
+    justify-self: flex-end;
+}
+
+#menu-btn:hover{
+    transform: scale(1.1);
+}
+
+#lateral-menu{
+    --width: 20vw;
+
+    position: fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    width: var(--width);
+    background-color: white;
+    padding-right: 1em;
+    color: black;
+    overflow: hidden;
+    z-index: 2;
+    transition: transform 0.5s;
+}
+
+.hidden-menu{
+    transform: translateX(calc(-1*var(--width)));
+}
+
+#logo-container{
+    font-size: 1.5em;
+    width: 100%;
+    height: 20%;
+}
+
+
+#lateral-menu div.nav-item{
+    border-left: 4px solid gray;
+    margin-bottom: 2vh;
+    margin-left: 1vw;
+    padding: 2vh;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#lateral-menu img{
+    width: 20%;
+    height: auto;
+    margin: 0vh 5px;
+}
+
+.selected{
+    background-color: rgba(173,216,230,0.8);
+}
+
+.vertical-line{
+    position: absolute;
+    left: 40%;
+    border: 1px solid white;    
+}
+
+/*------------Profile Container------------ */
+
+#profile-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+#profile-container h1{
+    margin: 5% 0%;
+    font-size: 1.5em;
+}
+
+#profile-container div{
+    --size: 11em;
+
+    width: var(--size);
+    height: var(--size);
+    border-radius: 100%;
+    background-color: white;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-container img{
+    max-width: 120%; 
+    max-height: 120%; 
+    object-fit: contain;
+}
+
+/*----------Top Cards Container--------------*/
+
+#cards-container{
+    display: flex;
+    justify-content: space-between;     
+    width: var(--section-width);
+    min-height: 5%;
+    max-height: 10%;
+    margin-bottom: 2vh;
+    z-index: 1;
+}
+
+#cards-container div{
+    background-color: var(--window-color);
+
+    width: 30%;
+    transition: transform 0.3s linear, opacity 0.3s linear;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main h1{
+    align-self:flex-start;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+/*----------Section style--------------*/
+
+.section{
+    position: relative;
+    width: var(--section-width);
+    height:75vh;
+    margin-bottom: 6vh;
+    
+    display: flex;
+    flex-direction: column;
+
+    transition: opacity 0.5s linear, transform 0.5s linear; 
+    overflow-y: hidden; 
+}
+
+
+.section .content{
+    background-color: var(--window-color);
+    border-radius: 2%;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+ 
+}
+
+
+/*----------Default Card style--------------*/
+
+.card{
+    display: flex;
+    padding: 1%;
+    border-radius: 5%;
+    background-color: var(--card-color);
+    flex-shrink: 0;
+}
+
+/*---------------------------*/
+
+.hidden-card{
+    opacity: 0;
+    transform: translateY(50%);
+}
+
+
+/*----------Work Cards--------------*/
+
+.work{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    align-items: center;
+    width:100%;
+    height: 10em;
+    margin: 2% 0%;   
+}
+
+.work-card{
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+    height:100%;
+    overflow-y: scroll;
+} 
+
+.year{
+    text-align: right;
+}
+
+.graph-card{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width:50%;
+    height: 100%
+}
+
+.graph-rect{
+    width: 3%;
+    height: 50%;
+    background-color: var(--purple-color);   
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    transition: width 1s;
+}
+
+/*----------Institute Cards--------------*/
+
+.institute-card{
+    margin: 1% 0%;
+    padding: 0;
+    height: 30%;
+}
+
+.institute-image-container{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-right: 1px solid white;
+   
+}
+
+.institute-image-container img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.institute-information{
+    padding: 2%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.institute-information img{
+    width:2em;
+    height: auto;
+    margin-right: 0.5em;
+}
+
+
+.row-centered{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+/*----------Options Container--------------*/
+
+.options-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.options-container p{
+   margin-left: auto;
+   margin-right: auto;
+   font-weight: 600;
+}
+
+/*----------Media Queries--------------*/
+
+@media only screen and (max-width: 1000px) {
+    #lateral-menu{
+        --width:25vw;
+    }
+    #author-image{
+        --size: 9em;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    body{
+        font-size: 0.8em;
+    }
+    .work{
+        height: 120px;
+    }
+    #lateral-menu{
+        --width:30vw;
+    }
+    .institute-image-container{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 550px) { 
+    body{
+        --top: calc(-0.2 * var(--header-size));
+    }
+    .work{
+        height: 100px;
+    }
+    .section{
+        height: 50vh;
+    }    
+    #lateral-menu{
+        --width:40vw;
+    }
+}
+
+@media only screen and (min-width: 550px){
+    #institutes-section .content{
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap : wrap;
+        
+    }
+    .institute-card{
+       width: 47%; 
+    }
+}
+
+
+

@@ -1,0 +1,21 @@
+{{#each institutes}}
+    <div class="card institute-card clickable" id={{parseID this.institution.id}}>
+        <div class="institute-image-container">
+            <img alt='{{this.institution.display_name}}'>
+        </div>
+
+        <div class="institute-information">
+            <div class="row-centered">
+                <img src="/assets/icons/institutes_white.svg">
+                {{this.institution.display_name}}
+            </div>
+            <div class="row-centered">
+                <img src="/assets/icons/earth_white.svg">
+                <img src={{flagUrl this.institution.country_code}}>
+            </div>
+            <div>
+                {{years this.years}}
+            </div>
+        </div>
+    </div>
+{{/each}}
