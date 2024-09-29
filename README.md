@@ -1,13 +1,13 @@
 # Running instructions
 
-## install dependecies
+### install dependecies
 
 > npm install 
 
-## Add API_KEY and CX from Google Image Search at: keys.js (Necessary to load images)
+#### Add API_KEY and CX from Google Image Search at: keys.js (Necessary to load images)
 
-## run server
+### run server
 
 > node server.js 
 
-## index page at: localhost:3000/
+#### index page at: localhost:3000/

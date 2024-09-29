@@ -86,15 +86,21 @@ const works_section_options_container = works_section_container.querySelector(".
 const works_dropdown = new DropDown(["Decrescente", "Crescente", "Alfabética"]);
 works_dropdown.addEventListener("option-clicked", onOptionClicked);
 works_dropdown.appendTo(works_section_options_container);
+const text = document.createElement("p");
+text.textContent = "Citações"
+works_section_options_container.append(text)
 
 //add topics section dropdown
 const topics_section_options_container = topics_section_container.querySelector(".options-container");
 const topics_dropdown = new DropDown(["Decrescente", "Crescente", "Alfabética"]);
 topics_dropdown.addEventListener("option-clicked", onOptionClicked);
 topics_dropdown.appendTo(topics_section_options_container);
+const text2 = document.createElement("p");
+text2.textContent = "Citações";
+topics_section_options_container.append(text2);
 
 //add institutes images
-{/*
+{
 const images = document.querySelectorAll('.institute-image-container img');
 for(const image of images){
     const alt = image.getAttribute("alt");
@@ -102,7 +108,7 @@ for(const image of images){
         .then(response=>response.text())
         .then(url => image.src = url);
 }
-*/}
+}
 
 //add institutes listeners
 

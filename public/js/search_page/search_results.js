@@ -9,8 +9,8 @@ class SearchResults {
     }
 
     renderTo() {
+        this.container.innerHTML = '';
         this.show();
-        this.container.innerHtml = "";
 
         if (this.results.length == 0)
             this.container.appendChild(this.#create_empty());
